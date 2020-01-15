@@ -36,6 +36,7 @@ jobs:
     - name: Push changes
       uses: tympaniplayer/github-push-action@master
       with:
+        force: true
         directory: dist/
         github_token: ${{ secrets.PERSONAL_TOKEN }}
         repository: tympaniplayer/tympaniplayer.github.io
