@@ -24,7 +24,9 @@ jobs:
         npm test
         npm run generate
     - name: Commit files
+      continue-on-error: true
       run: |
+        cd dist
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Add changes" -a
