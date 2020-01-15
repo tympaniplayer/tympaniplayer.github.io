@@ -20,6 +20,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: delete dist folder contents
+      run: |
+        cd dist/
+        rm -r *
+        cd ..
     - name: npm install, build, and test
       run: |
         npm ci
