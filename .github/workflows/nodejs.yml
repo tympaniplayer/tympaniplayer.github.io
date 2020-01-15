@@ -22,11 +22,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: delete dist folder contents
       run: |
-        pwd
-        ls
-        cd dist/
-        rm -r *
-        cd ..
+       rm -r dist/*
     - name: npm install, build, and test
       run: |
         npm ci
