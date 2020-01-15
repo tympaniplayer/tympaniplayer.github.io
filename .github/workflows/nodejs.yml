@@ -23,6 +23,7 @@ jobs:
     - name: delete dist folder contents
       run: |
         pwd
+        ls
         cd dist/
         rm -r *
         cd ..
