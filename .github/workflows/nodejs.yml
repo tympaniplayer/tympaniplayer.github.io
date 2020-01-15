@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Use GitHub Push
-      uses: ad-m/github-push-action@v0.5.0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
